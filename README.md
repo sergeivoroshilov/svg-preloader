@@ -1,1 +1,1 @@
-# svg-preloader
+# SVG Preloader

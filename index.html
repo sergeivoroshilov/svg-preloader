@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preloader</title>
+	<style type="text/css">
+		p{
+			width: 70%;
+			margin: 30px auto;
+			font-size: 120%;
+			line-height: 1.5;
+		}
+		h1{
+			margin: 30px auto;
+			width: 70%;
+		}
+		#overlay{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+		#preloader{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			setTimeout(function(){
+				var time = 1000;
+				var step = 0;
+				timer = setInterval(function(){
+					if (step > (time / 10) + 1) {
+						clearInterval(timer);
+						document.getElementById('overlay').style.display='none';
+					} else {
+						step++;
+						document.getElementById('overlay').style.opacity=(1 - step / (time / 10));
+					};
+				}, 10);
+			}, 5000);
+		};
+	</script>
+</head>
+<body>
+	<main>
+		<h1>SVG Prelooader</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id turpis vulputate eros facilisis imperdiet non non urna. Proin vehicula facilisis faucibus. In ultrices ipsum erat, vel lacinia mi sollicitudin fringilla. Maecenas feugiat eget odio nec malesuada. Quisque maximus purus feugiat est mattis cursus. Vivamus vulputate venenatis magna, quis vulputate elit dignissim sit amet. Quisque ac felis velit.
+		</p>
+		<p>
+			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin posuere vehicula quam, in gravida tortor suscipit auctor. Aenean mollis neque sodales nulla semper semper. Curabitur rhoncus ipsum dignissim sapien sollicitudin, a tempor sapien dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ac augue eget erat molestie pretium mollis auctor massa. Pellentesque pulvinar ipsum vitae nulla porttitor, a lobortis dui sodales. Nunc faucibus velit eu finibus imperdiet. Duis vitae tristique lectus. Nulla tellus erat, malesuada posuere felis ut, euismod varius justo.
+		</p>
+		<p>
+			Nullam ultrices ullamcorper ligula, sed posuere risus porttitor in. Suspendisse fermentum sollicitudin ipsum non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In augue ante, luctus in bibendum vitae, blandit eu lorem. Morbi sit amet placerat augue. Sed non orci aliquam, mattis lectus et, pretium velit. Quisque lobortis mattis quam, ac vulputate justo aliquam non. Suspendisse orci lorem, dictum vel ante eget, finibus cursus odio. Mauris ac orci dapibus, iaculis augue sit amet, placerat leo. Mauris ultricies justo justo, id interdum turpis imperdiet id. Sed porta felis at est laoreet, id iaculis purus vehicula. Phasellus ligula ipsum, malesuada at pellentesque nec, consequat non velit. Donec imperdiet massa est, et vulputate leo dapibus id.
+		</p>
+		<p>
+			Etiam euismod porta nunc at sodales. Fusce nec sem convallis enim imperdiet porttitor nec at ante. Pellentesque pretium mollis mi sit amet imperdiet. Nunc eleifend lectus erat, ac fermentum urna pretium quis. Duis lobortis faucibus aliquam. Donec pharetra ligula et rutrum dapibus. Quisque consectetur congue purus at accumsan. Quisque varius, sem in tempor eleifend, ligula sem vehicula sem, vel feugiat magna sem vel turpis. Vivamus non euismod tortor, finibus facilisis mauris. Aenean malesuada enim magna, quis dapibus enim porta a. Suspendisse id lorem a nulla ultrices scelerisque nec a felis. Suspendisse condimentum gravida consectetur. Suspendisse potenti. Phasellus vitae consectetur urna. Suspendisse potenti.
+		</p>		
+	</main>
+	<div id="overlay">
+		<object type="image/svg+xml" data="logo-new.svg" id="preloader"></object>
+	</div>
+</body>
+</html>
